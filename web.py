@@ -1,11 +1,9 @@
 import os 
 import pickle
 import streamlit as st
-import os
 
 st.set_page_config(page_title = 'Prediction of Disease Outbreaks', 
                    layout='wide', page_icon = "👨‍⚕️")
-
 
 model_directory = os.path.join("saved_models")
 diabetes_model = pickle.load(open(os.path.join(model_directory, "diabetes_model.sav"), "rb"))
