@@ -5,9 +5,9 @@ import streamlit as st
 st.set_page_config(page_title = 'Prediction of Disease Outbreaks', 
                    layout='wide', page_icon = "👨‍⚕️")
 
-diabetes_model = pickle.load(open("Z:\AICTE Internship\saved_models\diabetes_model.sav", 'rb'))
-heart_model = pickle.load(open("Z:\AICTE Internship\saved_models\heart_model.sav", 'rb'))
-parkinsons_model = pickle.load(open("Z:\AICTE Internship\saved_models\parkinsons_model.sav", 'rb'))
+diabetes_model = pickle.load(open("Z:\Disease-Predictor\saved_models\diabetes_model.sav", 'rb'))
+heart_model = pickle.load(open("Z:\Disease-Predictor\saved_models\heart_model.sav", 'rb'))
+parkinsons_model = pickle.load(open("Z:\Disease-Predictor\saved_models\parkinsons_model.sav", 'rb'))
 
 
 
