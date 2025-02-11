@@ -5,10 +5,11 @@ import streamlit as st
 st.set_page_config(page_title = 'Prediction of Disease Outbreaks', 
                    layout='wide', page_icon = "👨‍⚕️")
 
-model_directory = os.path.join("saved_models")
-diabetes_model = pickle.load(open(os.path.join(model_directory, "diabetes_model.sav"), "rb"))
-heart_model = pickle.load(open(os.path.join(model_directory, "heart_model.sav"), "rb"))
-parkinsons_model = pickle.load(open(os.path.join(model_directory, "parkinsons_model.sav"), "rb"))
+working_dir = os.path.dirname(os.path.abspath(__file__))
+
+diabetes_model = pickle.load(open(f'{working_dir}/saved_models/diabetes_model.sav', 'rb'))
+heart_model = pickle.load(open(f'{working_dir}/saved_models/heart_model.sav', 'rb'))
+parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
 
 
 
