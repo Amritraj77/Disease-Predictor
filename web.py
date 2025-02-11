@@ -1,14 +1,16 @@
 import os 
 import pickle
 import streamlit as st
+import os
 
 st.set_page_config(page_title = 'Prediction of Disease Outbreaks', 
                    layout='wide', page_icon = "👨‍⚕️")
 
-diabetes_model = pickle.load(open("Z:\Disease-Predictor\saved_models\diabetes_model.sav", 'rb'))
-heart_model = pickle.load(open("Z:\Disease-Predictor\saved_models\heart_model.sav", 'rb'))
-parkinsons_model = pickle.load(open("Z:\Disease-Predictor\saved_models\parkinsons_model.sav", 'rb'))
 
+model_directory = os.path.join("saved_models")
+diabetes_model = pickle.load(open(os.path.join(model_directory, "diabetes_model.sav"), "rb"))
+heart_model = pickle.load(open(os.path.join(model_directory, "heart_model.sav"), "rb"))
+parkinsons_model = pickle.load(open(os.path.join(model_directory, "parkinsons_model.sav"), "rb"))
 
 
 
